@@ -1,11 +1,9 @@
 /*!
-Theme Name: Kadence Child
-Theme URI: https://www.kadencewp.com/kadence-theme/
+Theme Name: Penncat Child
+Theme URI: https: //github.com/CapWebSolutions/penncat-kadence-child/
 Template: kadence
-Author: Kadence WP
-Author URI: https://www.kadencewp.com/
-Description: A child theme for the Kadence Theme.
-Version: 1.0.0
+Author: Cap Web Solutions Author URI: https: //capwebsolutions.com/
+Version: 0.0.3 Description: A child theme for the Kadence Theme customized for Penncat Corporation.
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: kadence-child
@@ -13,3 +11,77 @@ Text Domain: kadence-child
 
 /* Theme customization starts here
 -------------------------------------------------------------- */
+
+/* Login screen restyling */
+#login h1 a,
+.login h1 a {
+    background-image: url(/wp-content/uploads/2023/10/penncat_logo.png );
+    height: 65px;
+    width: 320px;
+    background-size: 320px 65px;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+}
+
+body.login div#login p#nav a,
+body.login div#login p#backtoblog a {
+    color: #ff0000 !important;
+    /* From Kadence palette */
+    color: var(--global-palette-btn-bg-hover) !important;
+    /* From Kadence palette */
+}
+
+/* For now turn off the required text on front page. */
+#gform_wrapper_1>div {
+    visibility: hidden;
+}
+
+body .gform_wrapper .gform_footer input.button,
+body .gform_wrapper .gform_footer input[type=submit] {
+    color: #ffffff;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgba(114, 114, 114, 0.4);
+    border-radius: 1px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 1px 0px rgba(114, 114, 114, 0.3);
+    -moz-box-shadow: 0 1px 0px rgba(114, 114, 114, 0.3);
+    -webkit-box-shadow: 0 1px 0px rgba(114, 114, 114, 0.3);
+    background-color: #ffb44e;
+}
+
+
+/* Start of Add verticle bar on footer copyright navigation */
+#colophon .site-middle-footer-wrap #footer-navigation li.menu-item:not(:last-child) a::after {
+    content: " |"
+}
+
+#colophon .footer-navigation .footer-menu-container>ul>li(last-child)>a {
+    padding-left: 0;
+}
+
+/* End of Add verticle bar on footer copyright navigation */
+
+/* Display footer nav center  aligned  */
+#nav_menu-3>h2,
+#menu-footer-nav {
+    text-align: center;
+}
+
+#nav_menu-3>h2 {
+    color: #fff;
+}
+
+/* End of Display footer center aligned */
+
+
+/* Center category title */
+h2.woocommerce-loop-category__title,
+h2.woocommerce-loop-product__title {
+    text-align: center;
+}
+
+/*
