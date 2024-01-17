@@ -23,7 +23,7 @@ block_template_part( 'html-title' );
                     <?php echo 'Manufacturer: ', $t_manufacturer; ?> 
                 </div>
 				
-                <strong>Product Model Downloads Available </strong>for <?php the_title(); ?>
+                <strong>Product Model Downloads</strong>
 				<ul>
                 <?php 
                 $files = rwmb_meta( 'penncat_group_product_download_sheets' );
