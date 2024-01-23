@@ -86,4 +86,39 @@ h2.woocommerce-loop-product__title {
     text-align: center;
 }
 
-/*
+/* Sitemap styling */
+.sitemap-container {
+    margin: 2.1em 0 0 10em;
+}
+
+h2.sitemap-heading {
+    margin: 2.1em 0 0 1em;
+}
+
+h3.sitemap-heading3 {
+    /* padding-bottom: 5px; */
+    margin: .1em 0 0 2em;
+
+}
+
+.page-container,
+.category-container,
+.author-container,
+.opt-container {
+    margin-left: 2.1em;
+}
+
+.opt-h3-container {
+    margin-left: 2.3em;
+}
+
+.page-container>ul,
+.category-container>ul,
+.opt-container>ul,
+.author-container>ul {
+    margin-left: 5em;
+}
+
+.opt-h3-container>ul {
+    margin-left: 5.2em;
+}
