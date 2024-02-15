@@ -4,7 +4,7 @@
  * Template: kadence
  * Author: Cap Web Solutions 
  * Author URI: https://capwebsolutions.com/
- * Version: 0.0.3 
+ * Version: 1.0.0
  * Description: A child theme for the Kadence Theme customized for Penncat Corporation.
  * License: GNU General Public License v3.0 (or later)
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -121,4 +121,17 @@ h3.sitemap-heading3 {
 
 .opt-h3-container>ul {
     margin-left: 5.2em;
+}
+/* Get rid of read more on testimonial front page display */
+.testimonial-read-more>p>a {
+    display: none;
+}
+
+li.indent-icon-list-item {
+    margin-left: 1.5em;
+}
+
+/* Turn off image display on Parts  page featured category blocks */
+.page-id-2694 img.wc-block-featured-category__background-image {
+    display: none;
 }
