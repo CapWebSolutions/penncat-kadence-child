@@ -6,7 +6,11 @@ namespace Penncat;
  * Enqueue child styles.
  */
 function child_enqueue_styles() {
-	wp_enqueue_style( 'child-theme', get_stylesheet_directory_uri() . '/style.css', array(), 100 );
+
+    // Get the version of the theme
+    $theme_version = wp_get_theme()->get('Version');
+    // Enqueue style.css file with the theme version
+	wp_enqueue_style( 'child-theme', get_stylesheet_directory_uri() . '/style.css', array(), $theme_version );
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\child_enqueue_styles' ); 
