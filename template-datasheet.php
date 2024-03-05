@@ -13,15 +13,15 @@ $product_line_terms = get_terms(array(
 ));
 
 ?>
-<div class="datasheet-container" style="margin: 2em 0 0 10em; ">
+<div class="datasheet-container">
     <?php
     if (!empty($product_line_terms)) :
         foreach ($product_line_terms as $product_line_term) :
     ?>
-            <div class="datasheet-content-area">
+            <div class="datasheet-product-line-container">
 
-                <h2>Product Line: <a href="/product-line/<?php echo $product_line_term->slug; ?>" ><?php echo $product_line_term->name; ?></a></h2>
-                <div class="manufacturer-container" style="margin: 1em 0 0 3em;">
+                <h2 class="datasheet-product-line-title">Product Line: <a href="/product-line/<?php echo $product_line_term->slug; ?>" ><?php echo $product_line_term->name; ?></a></h2>
+                <div class="datasheet-manufacturer-container">
                     <?php
                     $manufacturer_terms = get_terms(array(
                         'taxonomy' => 'manufacturer',
@@ -32,8 +32,8 @@ $product_line_terms = get_terms(array(
                     if (!empty($manufacturer_terms)) :
                         foreach ($manufacturer_terms as $manufacturer_term) :
                     ?>
-                            <h3>Manufacturer -> <a href="/manufacturer/<?php echo $manufacturer_term->slug; ?>"><?php echo $manufacturer_term->name; ?></a></h3>
-                            <h4 style="padding-left: 60px;"><?php echo $product_line_term->name; ?> Models</h4>
+                            <h3 class="datasheet-manufacturer-title">Manufacturer -> <a href="/manufacturer/<?php echo $manufacturer_term->slug; ?>"><?php echo $manufacturer_term->name; ?></a></h3>
+                            <h4 class="datasheet-model-title"><?php echo $product_line_term->name; ?> Models</h4>
 
                             <?php
                             $model_args = array(
@@ -57,10 +57,10 @@ $product_line_terms = get_terms(array(
 
                             if ($models->have_posts()) :
                             ?>
-                                <div class='model-entry' style="margin-left: 80px;">
-                                    <ul>
+                                <div class='datasheet-model-entry'>
+                                    <ul class="datasheet-model-list">
                                         <?php while ($models->have_posts()) : $models->the_post(); ?>
-                                            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                                            <li class="datasheet-model-list-entry"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                                         <?php endwhile; ?>
                                     </ul>
                                 </div>

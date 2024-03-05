@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2024-03-05
+### Changed
+- Adjusted markup for datasheet archive and single datasheet templates
+
+## [1.0.2] - 2024-02-16
+
+### Added
+
+- Github Updater logic to file header. 
+
 ## [0.0.1] - 2023-10-06
 
 ### Added
