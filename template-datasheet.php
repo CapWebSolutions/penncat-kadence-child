@@ -5,7 +5,7 @@ Template Name: Datasheet Archive
 get_header();
 
 // Add preferred internal Kadence block pattern page header to page template file
-block_template_part( 'html-title' );
+block_template_part( 'html-title-gear-bg' );
 
 $product_line_terms = get_terms(array(
     'taxonomy' => 'product-line',

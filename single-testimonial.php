@@ -5,7 +5,7 @@ global $post;
 $post_id = ( empty( $post->ID ) ) ? get_the_ID() : $post->ID;
 
 // Add preferred internal Kadence block pattern page header to page template file
-block_template_part( 'html-title' );
+block_template_part( 'html-title-gear-bg' );
 
 // Get the post meta data
 $post_title = get_the_title( $post_id );
