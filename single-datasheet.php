@@ -17,10 +17,10 @@ block_template_part( 'html-title-gear-bg' );
                 <?php $t_model        = get_the_term_list( $post_id, 'model', '', '', '' ); ?>
 
                 <div class="datasheet-productline">
-                <h3 class="datasheet-product-line-title">Product Line: <a href="/product-line/"><?php echo  $t_product_line; ?></a></h2>
+                <h3 class="datasheet-product-line-title">Product Line: <?php echo  $t_product_line; ?></h2>
                 </div>
                 <div class="datasheet-manufacturer-container">
-                    <h4 class="datasheet-manufacturer-title">Manufacturer -> <a href="/manufacturer/"><?php echo $t_manufacturer; ?></a></h3>
+                    <h4 class="datasheet-manufacturer-title">Manufacturer -> <?php echo $t_manufacturer; ?></h3>
                 </div>
 				
                 <h5 class="datasheet-model-title">Product Model Downloads</h5>
