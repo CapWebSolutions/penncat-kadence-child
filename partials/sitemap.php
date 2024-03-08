@@ -16,7 +16,6 @@ get_header();
 
 // Add preferred internal Kadence block pattern page header to page template file
 block_template_part( 'html-title' );
-block_template_part( 'row-content-max-width-open' );
 
 echo '<div class="sitemap-container"><div class="page-container">';
   echo '<h2 class="sitemap-heading">Pages</h2>';
