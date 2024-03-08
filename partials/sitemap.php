@@ -30,7 +30,12 @@ echo '<div class="sitemap-container"><div class="page-container">';
 
   echo '<div class="category-container">';
     echo '<h2 class="sitemap-heading">Posts by Category</h2>';
-    $cats = get_categories('exclude=');
+    // 102 -> ShowOnFront
+    $args = array(
+      'exclude' => '102',
+      'hide_empty' => true,
+    );
+    $cats = get_categories( $args );
     foreach ($cats as $cat) {
       echo '<h3 class="sitemap-heading3">' . $cat->cat_name . '</h3>';
       echo '<ul>';
@@ -39,9 +44,9 @@ echo '<div class="sitemap-container"><div class="page-container">';
         the_post();
         $category = get_the_category();
         // Display post by category, excluding duplicates
-        if ($category[0]->cat_ID == $cat->cat_ID) {
+        // if ($category[0]->cat_ID == $cat->cat_ID) {
           echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
-        }
+        // }
       }
       echo '</ul>';
     }
@@ -50,7 +55,7 @@ echo '<div class="sitemap-container"><div class="page-container">';
 
   echo '<div class="opt-container">
     <h2 class="sitemap-heading">Other Post Types</h2>';
-    // Display all other post types not2 listed above
+    // Display all other post types not listed above
     foreach( get_post_types( array('public' => true) ) as $post_type ) {
       if ( in_array( $post_type, array('post','page','attachment', 'kadence_element') ) ) {
         continue;
@@ -71,11 +76,11 @@ echo '<div class="sitemap-container"><div class="page-container">';
     }
   echo '</div>';
 
-  echo '<div class="author-container"><h2 class="sitemap-heading">Authors</h2>';
-  echo '<ul>';
-  wp_list_authors( array(
-    'exclude_admin' => false
-  ) );
-  echo '</ul></div>';
+  // echo '<div class="author-container"><h2 class="sitemap-heading">Authors</h2>';
+  // echo '<ul>';
+  // wp_list_authors( array(
+  //   'exclude_admin' => true
+  // ) );
+  // echo '</ul></div>';
 
 echo '</div>';
