@@ -47,7 +47,7 @@ block_template_part( 'html-title-gear-bg' );
 
 
 // Add preferred internal Kadence block pattern page footer / CTA to page template file
-// block_template_part( 'html-request-free-quote-box' );
+block_template_part( 'html-request-free-quote-box' );
 get_footer();
 
 
