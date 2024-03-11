@@ -4,7 +4,7 @@
  * Template: kadence
  * Author: Cap Web Solutions 
  * Author URI: https://capwebsolutions.com/
- * Version: 1.0.7
+ * Version: 1.0.8
  * Description: A child theme for the Kadence Theme customized for Penncat Corporation.
  * License: GNU General Public License v3.0 (or later)
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -87,21 +87,6 @@ h2.woocommerce-loop-product__title {
     text-align: center;
 }
 
-/* Sitemap styling */
-.sitemap-container {
-    margin: 2.1em 0 0 10em;
-}
-
-h2.sitemap-heading {
-    margin: 2.1em 0 0 1em;
-}
-
-h3.sitemap-heading3 {
-    /* padding-bottom: 5px; */
-    margin: .1em 0 0 2em;
-
-}
-
 .page-container,
 .category-container,
 .author-container,
@@ -136,3 +121,208 @@ li.indent-icon-list-item {
 .page-id-2694 img.wc-block-featured-category__background-image {
     display: none;
 }
+/* ****************************************************************** 
+  Datasheet Styling 
+  */
+h1.datasheet-heading,
+h2.datasheet-heading,
+.datasheet-heading {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.0;
+    text-transform: capitalize;
+    color: var(--global-palette3);
+    font-size: 1.5em;
+}
+
+h1.datasheet-heading {
+    font-size: 50px;
+}
+
+h2.datasheet-heading {
+    font-size: 36px;
+}
+
+.datasheet-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+
+/* .datasheet-list .datasheet-item {
+    width: calc(33.3333333333% - 20px);
+}
+
+*/
+.datasheet-list .datasheet-item .datasheet-title {
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 0px;
+    display: block;
+}
+
+.btn-datasheet {
+    display: flex;
+    width: 150px;
+    padding: 10px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-datasheet-download {
+    background: #ffcc66;
+    margin-bottom: 10px;
+}
+
+.btn-datasheet-download:hover {
+    color: #fff;
+    background: #99ccff;
+}
+
+.btn-datasheet-view {
+    background: #99ccff;
+}
+
+.btn-datasheet-view:hover {
+    color: #fff;
+    background: #ffcc66;
+}
+
+.datasheet-container {
+    margin: 2em 50vh 0 50vh;
+
+}
+
+.datasheet-product-line-container {}
+
+h2.datasheet-product-line-title,
+h3.datasheet-product-line-title {
+    background-color: var(--global-palette7);
+}
+
+h2.datasheet-product-line-title a,
+h3.datasheet-product-line-title a,
+h3.datasheet-manufacturer-title a,
+h4.datasheet-manufacturer-title a {
+    text-decoration: underline;
+}
+
+.datasheet-manufacturer-container {
+    margin: 1em 0 0 3em;
+}
+
+.datasheet-model-entry {
+    margin-left: 80px;
+}
+
+h2.datasheet-product-line-title::before,
+h3.datasheet-product-line-title::before,
+h3.datasheet-manufacturer-title::before,
+h4.datasheet-manufacturer-title::before,
+h4.datasheet-model-title::before,
+h5.datasheet-model-title::before {
+    content: "➤ ";
+}
+
+li.datasheet-model-list-entry::before {
+    content: " ";
+}
+
+h4.datasheet-model-title {
+    padding-left: 10vh;
+}
+
+h5.datasheet-model-title {
+    padding-left: 15vh;
+}
+
+ul.datasheet-model-list,
+li.datasheet-model-list-entry {
+    color: var(--global-palette5);
+    list-style-type: circle;
+}
+
+@media (max-width: 575px) {
+    .datasheet-list {
+        gap: 50px;
+    }
+
+    .datasheet-list .datasheet-item {
+        width: 100%;
+    }
+
+    .datasheet-container {
+        margin: .5em 0 0 0;
+
+    }
+
+    .datasheet-manufacturer-container {
+        margin: 0 0 0 .8em;
+    }
+
+    h1.datasheet-heading,
+    h2.datasheet-heading,
+    .datasheet-heading {
+        font-size: 1em;
+    }
+
+    .datasheet-container h2,
+    .datasheet-container h3,
+    .datasheet-container h4 {
+        font-size: 1em;
+    }
+
+    h4.datasheet-model-title {
+        padding-left: 1em;
+    }
+
+    h5.datasheet-model-title {
+        padding-left: 7vh;
+    }
+
+    .datasheet-model-entry {
+        margin-left: 1.7em;
+    }
+}
+
+/* ****************************************************************** 
+  End of Datasheet Styling 
+  */
+
+
+/* ****************************************************************** 
+  Sitemap Styling 
+ */
+
+.sitemap-container {
+    margin: 2.1em 0 0 10em;
+}
+
+h2.sitemap-heading {
+    margin: 2.1em 0 0 1em;
+}
+
+h3.sitemap-heading3 {
+    /* padding-bottom: 5px; */
+    margin: .1em 0 0 2em;
+
+}
+
+@media (max-width: 575px) {
+    .sitemap-container {
+        margin: auto auto;
+    }
+
+    .opt-h3-container {
+        margin-left: 0;
+    }
+}
+
+/* ****************************************************************** 
+  End of Sitemap Styling 
+ */
