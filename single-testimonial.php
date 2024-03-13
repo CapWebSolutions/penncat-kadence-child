@@ -15,7 +15,7 @@ $testimonial_title = rwmb_meta( 'penncat_testimonial_title' );
 $post_thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
 ?>
-<div class="testimonial-container" style="margin: 2em 15em 2em; ">
+<div class="testimonial-container">
     <div class="testimonial-wrapper">
         <blockquote class="wp-block-quote is-style-default has-theme-palette-8-background-color has-background">
             <?php the_content( $post_id ); ?>
