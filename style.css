@@ -4,7 +4,7 @@
  * Template: kadence
  * Author: Cap Web Solutions 
  * Author URI: https://capwebsolutions.com/
- * Version: 1.0.9
+ * Version: 1.0.10
  * Description: A child theme for the Kadence Theme customized for Penncat Corporation.
  * License: GNU General Public License v3.0 (or later)
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -328,17 +328,36 @@ h3.sitemap-heading3 {
  /* ****************************************************************** 
   Testimonial Styling
  */
-@media (max-width: 575px) {
-    .testimonial-container {
-        margin: .7em 0;
-    }
+.testimonial-wrapper {
+    margin: 2em 50vh 0 50vh;
 
+}
+
+.testimonial-wrapper img {
+    padding-left: 20vh;
+    padding-bottom: 1vw;
+
+}
+
+.testimonial-meta {
+    margin: 0 0 20px 10vh;
+}
+@media (max-width: 575px) {
+    .testimonial-wrapper {
+            margin: 0 0 0 0;
+    
     .testimonial-container.blockquote {
         text-align: center;
     }
-
+    
     .testimonial-meta {
-        text-align: center;
+        text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-wrapper img {
+            padding-left: 10vh;
+            padding-bottom: 1vw;
     }
 }
 
