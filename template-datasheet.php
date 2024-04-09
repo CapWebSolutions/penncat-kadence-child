@@ -8,7 +8,7 @@ get_header();
 block_template_part( 'html-title' );
 
 $product_line_terms = get_terms(array(
-    'taxonomy' => 'product-line',
+    'taxonomy' => 'productline',
     'hide_empty' => false,
 ));
 

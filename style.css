@@ -198,15 +198,17 @@ h2.datasheet-heading {
 
 }
 
-.datasheet-product-line-container {}
+.datasheet-productline-container {
+    margin: 1em 0 0 3em;
+}
 
-h2.datasheet-product-line-title,
-h3.datasheet-product-line-title {
+h2.datasheet-productline-title,
+h3.datasheet-productline-title {
     background-color: var(--global-palette7);
 }
 
-h2.datasheet-product-line-title a,
-h3.datasheet-product-line-title a,
+h2.datasheet-productline-title a,
+h3.datasheet-productline-title a,
 h3.datasheet-manufacturer-title a,
 h4.datasheet-manufacturer-title a {
     text-decoration: underline;
@@ -216,12 +218,15 @@ h4.datasheet-manufacturer-title a {
     margin: 1em 0 0 3em;
 }
 
+.datasheet-model-container {
+    margin: 1em 0 0 3em;
+}
 .datasheet-model-entry {
-    margin-left: 80px;
+    margin: 1em 0 0 7em;
 }
 
-h2.datasheet-product-line-title::before,
-h3.datasheet-product-line-title::before,
+h2.datasheet-productline-title::before,
+h3.datasheet-productline-title::before,
 h3.datasheet-manufacturer-title::before,
 h4.datasheet-manufacturer-title::before,
 h4.datasheet-model-title::before,
@@ -233,12 +238,9 @@ li.datasheet-model-list-entry::before {
     content: " ";
 }
 
-h4.datasheet-model-title {
-    padding-left: 10vh;
-}
-
+h4.datasheet-model-title,
 h5.datasheet-model-title {
-    padding-left: 15vh;
+    padding-left: 10vh;
 }
 
 ul.datasheet-model-list,
@@ -264,6 +266,13 @@ li.datasheet-model-list-entry {
     .datasheet-manufacturer-container {
         margin: 0 0 0 .8em;
     }
+                                .datasheet-model-container {
+                                    margin: 0 0 0 .8em;
+                                }
+                
+                                .datasheet-model-entry {
+                                    margin: 0 0 0 7em;
+                                }
 
     h1.datasheet-heading,
     h2.datasheet-heading,
@@ -282,7 +291,7 @@ li.datasheet-model-list-entry {
     }
 
     h5.datasheet-model-title {
-        padding-left: 7vh;
+        padding-left: 4vh;
     }
 
     .datasheet-model-entry {
