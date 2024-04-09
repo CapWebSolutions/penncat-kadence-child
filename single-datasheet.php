@@ -5,14 +5,14 @@ global $post;
 $post_id = ( empty( $post->ID ) ) ? get_the_ID() : $post->ID;
 
 // Add preferred internal Kadence block pattern page header to page template file
-block_template_part( 'html-title-gear-bg' );
+block_template_part( 'html-title' );
 ?>
 <div class="datasheet-container">
 	<div class="datasheet-wrap">
 		<div class="datasheet-list">
 			<div class="datasheet-item">
                 <h2 class="datasheet-title">Model: <?php the_title(); ?></h2>
-                <?php $t_product_line = get_the_term_list( $post_id, 'product-line', '', '', '' ); ?>
+                <?php $t_product_line = get_the_term_list( $post_id, 'productline', '', '', '' ); ?>
                 <?php $t_manufacturer = get_the_term_list( $post_id, 'manufacturer', '', '', '' ); ?>
                 <?php $t_model        = get_the_term_list( $post_id, 'model', '', '', '' ); ?>
 
