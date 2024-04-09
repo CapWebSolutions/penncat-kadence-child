@@ -22,22 +22,21 @@ block_template_part( 'html-title' );
                 <div class="datasheet-manufacturer-container">
                     <h4 class="datasheet-manufacturer-title">Manufacturer -> <?php echo $t_manufacturer; ?></h3>
                 </div>
-                <div class="datasheet-model-container">
-                    <h5 class="datasheet-model-title">Product Model Downloads</h5>
-                    <div class='datasheet-model-entry'>
-                        <ul class="datasheet-download-list-container">
-                        <?php 
-                        $files = rwmb_meta( 'penncat_group_product_download_sheets' );
-                        foreach ( $files as $file ) :
-                            $ds_post_id = $files[0]['penncat_file'][0];
-                            echo '<li>' . $file['penncat_download_type'] . '</li>';
-                            echo '<a href="' . esc_url(wp_get_attachment_url( $ds_post_id ) ) . '" class="btn-datasheet btn-datasheet-download" download>Download' . '</a>';
-                            echo '<a href="' . esc_url(wp_get_attachment_url( $ds_post_id ) ) . '" class="btn-datasheet btn-datasheet-view" >Preview' . '</a>';
-                        endforeach;
-                        ?>
-                        </ul>
-                    </div>  <!-- // datasheet-model-entry -->
-                </div> <!-- // datasheet-model-container -->
+				
+                <h5 class="datasheet-model-title">Product Model Downloads</h5>
+                <div class='datasheet-model-entry'>
+                    <ul class="datasheet-download-list-container">
+                    <?php 
+                    $files = rwmb_meta( 'penncat_group_product_download_sheets' );
+                    foreach ( $files as $file ) :
+                        $ds_post_id = $files[0]['penncat_file'][0];
+                        echo '<li>' . $file['penncat_download_type'] . '</li>';
+                        echo '<a href="' . esc_url(wp_get_attachment_url( $ds_post_id ) ) . '" class="btn-datasheet btn-datasheet-download" download>Download' . '</a>';
+                        echo '<a href="' . esc_url(wp_get_attachment_url( $ds_post_id ) ) . '" class="btn-datasheet btn-datasheet-view" >Preview' . '</a>';
+                    endforeach;
+                    ?>
+                    </ul>
+                </div>  <!-- // datasheet-model-entry -->
             </div>  <!-- //datasheet-item -->
 		</div>
 	</div>
